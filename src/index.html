@@ -1,10 +1,103 @@
 ---
 layout: root
-title:
+title: Café Villa Bernstein
 meta:
     url:
-    title:
-    description:
+    title: Café Villa Bernstein – Krimidinner im Stile der 1920er Jahre.
+    description: Das Café Villa Bernstein bietet neben Kulinaritäten und Delikatessen auch eine spannende Abend-Atmossphäre.
     image:
+hours:
+    - label: Di. – Fr.
+      value: 11 – 22 Uhr
+    - label: Mo.
+      value: Ruhetag
+    - label: Sa. – So.
+      value: 11 – 22 Uhr
+kitchen:
+    - label: Di. – Fr.
+      value: 12 – 21 Uhr
+    - label: Sa. – So.
+      value: 12 – 22 Uhr
 ---
-<main class="index"></main>
+
+<main class="index">
+    <section id="home" class="container-fluid index-stage">
+        <img src="/assets/images/index-stage.jpg" alt="" class="index-stage-image" />
+        <h1 class="index-stage-title">Herzlich willkommen in der Villa Bernstein</h1>
+        <a href="#historie" class="index-stage-button">
+            <img src="/assets/images/chevron--down.svg" class="index-stage-icon" />
+        </a>
+    </section>
+
+    <section id="historie" class="container-fluid index-section">
+        <div class="row justify-content-between">
+            <div class="col-md-6">
+                <h3 class="index-section-title">Historie der Villa Bernstein</h3>
+                <p class="index-section-text">
+                    Die 1922 erbaute Villa Bernstein liegt im Vorort Meisterstadt Seken und wurde als Wohn- und Repräsentationshaus der Industriellenfamilie
+                    Breitenbach gebaut. Damals besaß sie eine Wohnfläche von 760 qm und einen wunderschönen Park.
+                </p>
+                <p class="index-section-text">
+                    Die Wohnfläche wird heute als Restaurant und Café genutzt. Im Park befinden sich teilweise die Außenbereiche des Cafés, die sich mit
+                    schmiedeeisernen Toren und Zäunen in das Gesamtbild eines nach dem Stil der englischen Gärten gestalteten Parks einfügen.
+                </p>
+                <p class="index-section-text">
+                    Seit 1964 befindet sich die Villa im Besitz der Familie Besten, die 2005 den Café- und Restaurantbetrieb eröffnet hat. Die ungestörte Lage
+                    und das altertümliche Flair der Villa bieten ein optimales Ambiente für Erlebnisgastronomie und so wurden 2010 die ersten Kriminaldinner
+                    veranstaltet, die bis heute großen Anklang finden.
+                </p>
+            </div>
+            <img src="/assets/images/foto3_krimidinner.jpg" alt="" class="col-md-4 index-section-image" />
+        </div>
+    </section>
+
+    <section id="spiel" class="container-fluid index-section">
+        <div class="row justify-content-between">
+            <img src="/assets/images/foto2_krimidinner.jpg" alt="" class="col-md-4 index-section-image" />
+            <div class="col-md-6">
+                <h3 class="index-section-title">Wieder ist ein Verbrechen geschehen ...</h3>
+                <p class="col-12 index-section-text">
+                    Jeden Samstagabend passiert in der Villa Bernstein um Punkt 19 Uhr ein Mord. Während sich alle Gäste beim 6-Gänge-Men¸ im Stile der 20er
+                    Jahre entspannen, passiert das Verbrechen.
+                </p>
+                <p class="index-section-text">
+                    Die Gäste, gekleidet in Abendgarderobe passend zum Thema des Abends, erleben hautnah die Kriminalgeschichte, angelehnt an alte
+                    Schwarzweißfilm-Kriminalfälle, und können durch genaue Beobachtungen zur Lösung des Falls beitragen.
+                </p>
+                <p class="index-section-text">
+                    Es gibt keinen festen Ablaufplan. Nur die Rollen der Beteiligten sind fest verteilt. Einzig der Mörder weiß um seine Rolle als Meuchler,
+                    alle anderen Gäste sind ahnungslos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="container-fluid index-section">
+        <p class="index-section-text">
+            <span class="index-section-head">Villa Bernstein</span>
+            Familie Besten<br />
+            Bernsteinallee 3<br />
+            23456 Meisterstadt<br />
+            Telefon : (0)456 4876410<br />
+            E-Mail : info@villa-bernstein.de<br />
+            Internet : www.villa-Bernstein.de
+        </p>
+        <ul class="index-section-list">
+            <span class="index-section-head">Öffnungszeiten</span>
+            {% for entry in hours %}
+            <li class="index-section-list-item">
+                <span class="index-section-list-item-half">{{ entry.label }}</span><span class="index-section-list-item-half">{{ entry.value }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        <ul class="index-section-list">
+            <span class="index-section-head">Küche</span>
+            {% for entry in kitchen %}
+            <li class="index-section-list-item">
+                <span class="index-section-list-item-half">{{ entry.label }}</span><span class="index-section-list-item-half">{{ entry.value }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        <p class="index-section-disclaimer">Für kleinere Gruppen oder Gesellschaften können auch individuelle Termine vereinbart werden.</p>
+    </section>
+</main>

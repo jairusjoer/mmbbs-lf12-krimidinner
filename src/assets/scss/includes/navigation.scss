@@ -1,0 +1,50 @@
+.head {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 420;
+    background-color: var(--clr-main);
+    height: 3rem;
+    color: var(--clr-g100);
+    font-size: 14px;
+    border-radius: 1.5rem;
+    padding: 0 0.75rem;
+    filter: drop-shadow(0px 18px 12px rgba(0, 0, 0, 0.166));
+
+    &-title,
+    &-item,
+    &-line {
+        margin: 0.5rem 0.75rem;
+    }
+
+    &-title,
+    &-item {
+        white-space: nowrap;
+        padding: 0.5rem 0;
+        line-height: 1rem;
+    }
+
+    &-title,
+    &-line {
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    &-item {
+        color: var(--clr-g060);
+        &:active {
+            color: var(--clr-g100);
+        }
+    }
+
+    &-line {
+        height: 1rem;
+        width: 1px;
+        background: var(--clr-base);
+    }
+}
