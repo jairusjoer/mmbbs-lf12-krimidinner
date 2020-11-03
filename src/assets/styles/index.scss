@@ -80,7 +80,7 @@
         background-color: var(--clr-g090);
 
         &-headline {
-            color: var(--clr-g050);
+            @extend .index-story-headline;
         }
 
         &-text {
@@ -114,7 +114,7 @@
         }
 
         &-headline {
-            color: var(--clr-main);
+            @extend .index-game-text;
 
             &:nth-child(n + 2) {
                 margin-top: 1.5rem;
@@ -140,7 +140,7 @@
         }
 
         &-tabledata {
-            padding-top: .5rem;
+            padding-top: 0.5rem;
         }
 
         &-disclaimer {
@@ -158,7 +158,7 @@
         }
 
         &-map {
-            border-radius: .25rem;
+            border-radius: 0.25rem;
             overflow: hidden;
             filter: grayscale(1);
         }
