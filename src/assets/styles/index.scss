@@ -32,19 +32,25 @@
             bottom: 1.5rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 3rem;
+            padding: 15px;
             height: 3rem;
-            padding: 0.75rem;
+            width: 3rem;
             border-radius: 1.5rem;
             border: 1px solid white;
+            line-height: 0;
 
             &:hover {
                 background-color: white;
 
-                .index-stage-icon {
+                .index-home-icon {
                     mix-blend-mode: difference;
                 }
             }
+        }
+
+        &-icon {
+            height: 1rem;
+            width: 1rem;
         }
     }
 
