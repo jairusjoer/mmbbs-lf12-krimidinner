@@ -11,7 +11,7 @@
         "@11ty/eleventy": "^0.11.0"
     },
     "scripts": {
-        "sass": "sass src/assets/scss/main.scss dist/assets/css/main.css --no-source-map",
+        "sass": "sass src/assets/styles/main.scss dist/assets/styles/main.css --no-source-map",
         "dev:eleventy": "eleventy --serve",
         "dev:sass": "npm run sass -- --watch",
         "dev": "npm-run-all sass --parallel dev:*",

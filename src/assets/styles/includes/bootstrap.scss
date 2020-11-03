@@ -1,0 +1,19 @@
+.form-control,
+.form-select {
+    border-color: var(--clr-g080);
+    background-color: var(--clr-g090);
+    color: var(--clr-main);
+
+    &::placeholder {
+        color: var(--clr-g050);
+    }
+
+    &:focus {
+        background-color: var(--clr-g080);
+        color: var(--clr-main);
+    }
+}
+
+.form-select {
+    background-image: url("/assets/images/icon-chevron-down.svg");
+}

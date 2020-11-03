@@ -1,0 +1,10 @@
+// Configuration
+@import 'config.scss';
+
+// Includes
+@import 'includes/navigation.scss',
+        'includes/footer.scss',
+        'includes/bootstrap.scss';
+
+// Sites
+@import 'index.scss';
